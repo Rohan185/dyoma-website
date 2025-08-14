@@ -52,7 +52,6 @@ const Testimonials = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
       },
     },
   };
@@ -71,7 +70,7 @@ const Testimonials = () => {
             What Our <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Clients Say</span>
           </h2>
           <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed">
-            Don't just take our word for it - hear from the businesses we've helped transform
+            Don&apos;t just take our word for it - hear from the businesses we&apos;ve helped transform
           </p>
         </motion.div>
 
@@ -83,7 +82,7 @@ const Testimonials = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-10 testimonials-grid"
         >
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.name}
               variants={cardVariants}
@@ -107,7 +106,7 @@ const Testimonials = () => {
 
               {/* Content */}
               <blockquote className="text-white/80 text-lg leading-relaxed mb-8">
-                "{testimonial.content}"
+                &ldquo;{testimonial.content}&rdquo;
               </blockquote>
 
               {/* Author */}
@@ -138,7 +137,7 @@ const Testimonials = () => {
             Ready to Join Our Success Stories?
           </h3>
           <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help you achieve similar results with our AI and engineering expertise.
+            Let&apos;s discuss how we can help you achieve similar results with our AI and engineering expertise.
           </p>
           <motion.button
             whileHover={{ 

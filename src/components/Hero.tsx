@@ -22,7 +22,6 @@ const Hero = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
       },
     },
   };
@@ -157,7 +156,7 @@ const Hero = () => {
             { number: '50+', label: 'Projects Delivered' },
             { number: '99%', label: 'Client Satisfaction' },
             { number: '24/7', label: 'Support Available' },
-          ].map((stat, index) => (
+          ].map((stat) => (
             <motion.div
               key={stat.label}
               whileHover={{ scale: 1.05 }}

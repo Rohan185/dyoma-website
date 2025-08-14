@@ -130,7 +130,6 @@ const Features = () => {
                   transition={{
                     duration: 4,
                     repeat: Infinity,
-                    ease: "easeInOut"
                   }}
                   className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl opacity-80"
                 />
@@ -142,7 +141,6 @@ const Features = () => {
                   transition={{
                     duration: 3,
                     repeat: Infinity,
-                    ease: "easeInOut",
                     delay: 1
                   }}
                   className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl opacity-60"

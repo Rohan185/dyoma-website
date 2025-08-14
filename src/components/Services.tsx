@@ -60,7 +60,6 @@ const Services = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
       },
     },
   };
@@ -91,7 +90,7 @@ const Services = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16"
         >
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
               key={service.title}
               variants={cardVariants}
@@ -146,7 +145,7 @@ const Services = () => {
             Ready to Transform Your Business?
           </h3>
           <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our AI and engineering expertise can accelerate your growth and innovation.
+            Let&apos;s discuss how our AI and engineering expertise can accelerate your growth and innovation.
           </p>
           <motion.button
             whileHover={{ 
