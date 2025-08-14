@@ -1,26 +1,163 @@
 @import "tailwindcss";
 
+/* Custom spacing variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --section-padding-y: 8rem;
+  --section-padding-x: 3rem;
+  --card-padding: 3rem;
+  --button-padding-x: 2.5rem;
+  --button-padding-y: 1rem;
+  --heading-margin-bottom: 3rem;
+  --content-margin-bottom: 2rem;
+}
+
+:root {
+  --background: #080808;
+  --foreground: #ffffff;
+  --accent: #6366f1;
+  --muted: #404040;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Improved spacing and typography */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Better button spacing */
+button {
+  letter-spacing: -0.01em;
+}
+
+/* Improved section spacing */
+section {
+  position: relative;
+}
+
+/* Better mobile spacing */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Proper spacing for website sections */
+section#home {
+  padding-top: var(--section-padding-y) !important;
+  padding-bottom: var(--section-padding-y) !important;
+}
+
+section#services {
+  padding-top: var(--section-padding-y) !important;
+  padding-bottom: var(--section-padding-y) !important;
+}
+
+section#about {
+  padding-top: var(--section-padding-y) !important;
+  padding-bottom: var(--section-padding-y) !important;
+}
+
+section#contact {
+  padding-top: var(--section-padding-y) !important;
+  padding-bottom: var(--section-padding-y) !important;
+}
+
+/* Better component spacing */
+.hero-content {
+  padding: 4rem 0 !important;
+}
+
+.section-header {
+  margin-bottom: var(--heading-margin-bottom) !important;
+}
+
+.service-card {
+  padding: var(--card-padding) !important;
+  margin-bottom: var(--content-margin-bottom) !important;
+}
+
+.testimonial-card {
+  padding: var(--card-padding) !important;
+  margin-bottom: var(--content-margin-bottom) !important;
+}
+
+/* Button improvements */
+.cta-button {
+  padding: var(--button-padding-y) var(--button-padding-x) !important;
+  margin: 1rem 0.5rem !important;
+}
+
+/* Typography spacing */
+.hero-title {
+  margin-bottom: var(--heading-margin-bottom) !important;
+}
+
+.hero-subtitle {
+  margin-top: var(--content-margin-bottom) !important;
+}
+
+.hero-description {
+  margin-bottom: var(--heading-margin-bottom) !important;
+}
+
+/* Grid and container improvements */
+.services-grid {
+  gap: 3rem !important;
+}
+
+.about-grid {
+  gap: 4rem !important;
+}
+
+.testimonials-grid {
+  gap: 3rem !important;
 }
